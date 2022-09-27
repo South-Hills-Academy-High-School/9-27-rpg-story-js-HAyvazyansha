@@ -98,6 +98,7 @@ function happyEnding() {
     blockObject.setAnyProperty(happy3, AnyProp.NextPage, happy4)
     return happy1
 }
+
 let sadending1: blockObject.BlockObject = null
 let sadending2: blockObject.BlockObject = null
 function sadEnding(){
@@ -106,6 +107,18 @@ function sadEnding(){
     blockObject.setAnyProperty(sadending1, AnyProp.NextPage, sadending2)
     return sadending1
 }
+let supperhappy3: blockObject.BlockObject = null
+let supperhappy2: blockObject.BlockObject = null
+let supperhappy1: blockObject.BlockObject = null
+function supperHappyEnding() {
+    supperhappy1 = createScript("Pineapple", "You Won 3B Dollars!!", 0)
+    supperhappy2 = createScript("Mr. Kao", "Omg thanks soo much", 3)
+    supperhappy3 = createScript("Pineapple", "No problem.", 4)
+    blockObject.setAnyProperty(supperhappy1, AnyProp.NextPage, supperhappy2)
+    blockObject.setAnyProperty(supperhappy2, AnyProp.NextPage, supperhappy3)
+    return supperhappy1
+}
+
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     if (choiceIndex == 1) {
         choiceIndex = 0
